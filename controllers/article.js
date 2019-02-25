@@ -1,18 +1,18 @@
 module.exports = {
-  index: function(req, res) {
-    res.send("index");
-  },
+  //   index: function(req, res) {
+  //     res.render(article/index);
+  //   },
   new: function(req, res) {
-    res.send("new");
+    res.render("article/new");
   },
   create: function(req, res) {
     res.redirect("/");
   },
   show: function(req, res) {
-    res.send(`welcome to ${req.params.id}`);
+    res.render("article/show");
   },
   edit: function(req, res) {
-    res.send(`edit ${req.params.id}`);
+    res.render("article/edit");
   },
   update: function(req, res) {
     res.redirect("/");
