@@ -10,12 +10,4 @@ router.get("/:id/edit", articleController.edit);
 router.put("/:id", articleController.update);
 router.delete("/:id", articleController.delete);
 
-//I want full CRUD on this....
-// "/article" --> lists everything GET
-// "/article/new"--> new article form  GET
-// "/article"--> creates new article in database POST
-// "/article/1"-->show article 1 GET
-// "/article/1/edit"-->edit article 1 GET
-// "/article/1"-->delete article 1 DELETE
-//friendly reminder that everything on this page is in fact /article
 module.exports = router;
