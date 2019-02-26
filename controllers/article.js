@@ -24,13 +24,12 @@ module.exports = {
   },
   update: function(req, res) {
     const { title, content } = req.body;
-    Article.findByIdAndUpdate({
+    Article.findByIdAndUpdate(req.params.id, {
       title,
       content
     }).then(article => {
       res.redirect(`/article/${article._id}`);
     });
-    res.redirect("/");
   },
   delete: function(req, res) {
     Article.remove({ _id: req.params.id }).then(article => {
