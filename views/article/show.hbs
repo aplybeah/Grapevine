@@ -1,7 +1,7 @@
 <h1>Show (article)</h1>
 
 <h2> {{article.title}}</h2>
-<p>{{article.createdAt}}</p>
+<p style="color:red">{{article.createdAt}}</p>
 <p>{{article.content}}</p>
 <form action="/article/{{article.id}}?_method=DELETE" method="POST">
     <input type="submit" value="Delete Post"></form>

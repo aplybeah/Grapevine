@@ -1,1 +1,8 @@
 <h1>Edit (article) here!</h1>
+<form action="/article" method="POST">
+    Title<br>
+    <input type="text" name="title" value="{{title}}"><br>
+    Article Here<br>
+    <textarea rows="16" cols="90" name="content" value="{{content}}"></textarea><br>
+    <input type="submit" value="Post">
+</form>
