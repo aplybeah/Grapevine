@@ -18,9 +18,18 @@ module.exports = {
     });
   },
   edit: function(req, res) {
-    res.render("article/edit");
+    Article.findById(req.params.id).then(article => {
+      res.render("article/edit", { article });
+    });
   },
   update: function(req, res) {
+    const { title, content } = req.body;
+    Article.findByIdAndUpdate({
+      title,
+      content
+    }).then(article => {
+      res.redirect(`/article/${article._id}`);
+    });
     res.redirect("/");
   },
   delete: function(req, res) {
