@@ -24,6 +24,8 @@ module.exports = {
     res.redirect("/");
   },
   delete: function(req, res) {
-    res.redirect("/");
+    Article.remove({ _id: req.params.id }).then(article => {
+      res.redirect("/");
+    });
   }
 };
