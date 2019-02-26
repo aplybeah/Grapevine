@@ -1,9 +1,11 @@
 <h1>Read Our Articles!!!</h1>
+<a href="/article/new">New Post</a>
 {{#if articles}}
 <ul>
     {{#each articles}}
     <li>
-        <a href="/article/{{_id}}">{{title}}</a> </li>
+        <a href="/article/{{_id}}">{{title}}</a>
+    </li>
     {{/each}}
 </ul>
 {{/if}}
