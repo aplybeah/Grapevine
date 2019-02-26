@@ -7,7 +7,12 @@ module.exports = {
     res.render("article/new");
   },
   create: function(req, res) {
-    res.redirect("/");
+    Article.create({
+      title,
+      content
+    }).then(article => {
+      res.redirect(`/article/${id}`);
+    });
   },
   show: function(req, res) {
     // res.render("article/show");
