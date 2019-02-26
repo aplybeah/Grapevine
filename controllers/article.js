@@ -1,3 +1,4 @@
+const Article = require("../models/index");
 module.exports = {
   //   index: function(req, res) {
   //     res.render(article/index);
@@ -9,7 +10,10 @@ module.exports = {
     res.redirect("/");
   },
   show: function(req, res) {
-    res.render("article/show");
+    // res.render("article/show");
+    Article.findById(req.params.id).then(article => {
+      res.render("article/show", { article });
+    });
   },
   edit: function(req, res) {
     res.render("article/edit");
