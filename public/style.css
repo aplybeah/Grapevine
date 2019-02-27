@@ -2,11 +2,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+  background: url("./bruno-thethe-1371178-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* This is the design branch */
 .topbar {
-  background-color: violet;
+  background-color: rgba(4, 35, 54, 0.8);
   height: 150px;
   width: 1300px;
   margin: 40px 0 0 0;
@@ -35,8 +37,9 @@ h2 {
   margin-top: 60px;
 }
 .bottombar {
-  background-color: violet;
+  background-color: rgba(1, 18, 27, 0.7);
   height: 150px;
   width: 1300px;
   border-radius: 0 0 8px 8px;
 }
+/* Photo by Bruno Thethe on Unsplash */
