@@ -1,8 +1,13 @@
-<h2>Edit (article) here!</h2>
-<form action="/article/{{article.id}}?_method=PUT" method="POST">
-    Title<br>
-    <input type="text" name="title" value="{{article.title}}"><br>
-    Article Here<br>
-    <textarea rows="16" cols="90" name="content" value="">{{article.content}}</textarea><br>
-    <input type="submit" value="Update">
-</form>
+<div class="topbar">
+
+    <h2>Edit (article) here!</h2>
+</div>
+<div class="centerspace">
+    <form action="/article/{{article.id}}?_method=PUT" method="POST">
+        <br>
+        <input type="text" name="title" value="{{article.title}}">
+        <textarea rows="16" cols="90" name="content" value="">{{article.content}}</textarea><br>
+        <input type="submit" value="Update">
+    </form>
+</div>
+<div class="bottombar"></div>
