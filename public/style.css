@@ -5,3 +5,12 @@ body {
   background-color: whitesmoke;
 }
 /* This is the design branch */
+.topbar {
+  background-color: violet;
+  height: 150px;
+  width: 1300px;
+}
+h2 {
+  text-align: center;
+  margin-top: 60px;
+}
