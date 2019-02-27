@@ -1,4 +1,4 @@
-const Article = require("../models/index");
+const { Article } = require("../models/index");
 module.exports = {
   new: function(req, res) {
     res.render("article/new");
