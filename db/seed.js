@@ -1,4 +1,4 @@
-const Article = require("../models/index");
+const { Article } = require("../models/index");
 
 Article.remove({}).then(() => {
   Article.insertMany([
@@ -6,11 +6,13 @@ Article.remove({}).then(() => {
       title: "New Methods in Marathon Training: Dedication, or Disaster?",
       content:
         "blah, blah, blah, blah, blah blah blah blah. Blah, blah, blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,"
+      // comment: "I'm a comment!!"
     },
     {
       title: "News, Drama, Coloring Books!!!",
       content:
         "tbh coloring books seem pretty rad right now, I'm stressed as hell."
+      // comment: "I too am a comment"
     },
     {
       title: "Hot Take",
