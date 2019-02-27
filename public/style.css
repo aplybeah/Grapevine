@@ -57,4 +57,9 @@ input[type="text"] {
   font-size: 28px;
   font-family: "Righteous", cursive;
 }
+textarea {
+  width: 600px;
+  font-size: 18px;
+  font-family: "Righteous", cursive;
+}
 /* Photo by Amos Bar-Zeev on Unsplash */
