@@ -23,9 +23,8 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    const { title, content } = req.body;
+    const { content } = req.body;
     Comment.findByIdAndUpdate(req.params.id, {
-      title,
       content
     }).then(comment => {
       res.redirect(`/comment/${comment._id}`);
