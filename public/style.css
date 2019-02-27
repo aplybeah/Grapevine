@@ -35,9 +35,15 @@ a {
 h2 {
   text-align: center;
   margin-top: 60px;
+  color: antiquewhite;
+}
+.centerspace {
+  height: 900px;
+  width: 1300px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .bottombar {
-  background-color: rgba(1, 18, 27, 0.7);
+  background-color: rgba(1, 18, 27);
   height: 150px;
   width: 1300px;
   border-radius: 0 0 8px 8px;
