@@ -1,11 +1,18 @@
-<h1>Read Our Articles!!!</h1>
-<a href="/article/new">New Post</a>
-{{#if articles}}
-<ul>
-    {{#each articles}}
-    <li>
-        <a href="/article/{{_id}}">{{title}}</a>
-    </li>
-    {{/each}}
-</ul>
-{{/if}}
+<div class="topbar">
+    <h2>Grapevine</h2>
+    <div class="clicklink">
+        <a href="/article/new" class="newpost">New Post</a>
+    </div>
+</div>
+<div class="centerspace">
+    {{#if articles}}
+    <ul>
+        {{#each articles}}
+        <li>
+            <a href="/article/{{_id}}">{{title}}</a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+<div class="bottombar"></div>

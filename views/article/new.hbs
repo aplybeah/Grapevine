@@ -1,8 +1,14 @@
-<h1>New Article</h1>
-<form action="/article" method="POST">
-    Title<br>
-    <input type="text" name="title" id="title"><br>
-    Article Here<br>
-    <textarea rows="16" cols="90" name="content" id=""></textarea><br>
-    <input type="submit" value="Post">
-</form>
+<div class="topbar">
+
+    <h2>New Article</h2>
+
+</div>
+
+<div class="centerspace">
+    <form action="/article" method="POST">
+        <input type="text" name="title" id="title" maxlength="50" placeholder="Title">
+        <textarea rows="16" cols="90" name="content" id="" placeholder="Say Something..."></textarea><br>
+        <input type="submit" value="Post">
+    </form>
+</div>
+<div class="bottombar"></div>
