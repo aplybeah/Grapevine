@@ -35,5 +35,13 @@ module.exports = {
     Article.remove({ _id: req.params.id }).then(article => {
       res.redirect("/");
     });
+  },
+  addComment: function(req, res) {
+    console.log("making a new comment!");
+    console.log(req.body);
+    const { comment } = req.body;
+    Article.findByIdAndUpdate(req.params.id, { comment }).then(article =>
+      res.redirect(`article/${article._id}/add-comment`, { comment })
+    );
   }
 };

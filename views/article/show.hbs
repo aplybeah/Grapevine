@@ -17,7 +17,7 @@
     <p class="timestamp"> {{article.createdAt}}</p>
     <br>
     <p class="article"> {{article.content}}</p>
-    <form action="/article/{{article.id}}">
+    <form action="/article/{{article.id}}/add-comment" method="POST">
         <textarea rows="5" cols="90" name="comment" id="" maxlength="125" placeholder="Speak on it!"></textarea><br>
         <input type="submit" value="Post">
     </form>

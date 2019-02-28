@@ -6,7 +6,6 @@ module.exports = {
   create: function(req, res) {
     const { content } = req.body;
     Comment.create({
-      title,
       content
     }).then(comment => {
       res.redirect(`/comment/${comment._id}`);
