@@ -47,6 +47,9 @@ h3 {
   font-family: "Righteous", cursive;
   font-size: 36px;
 }
+.c-header {
+  color: rgba(1, 18, 27);
+}
 ul {
   color: rgba(1, 18, 27);
   font-family: "Righteous", cursive;
