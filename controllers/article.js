@@ -41,7 +41,7 @@ module.exports = {
     console.log(req.body);
     const { comment } = req.body;
     Article.findByIdAndUpdate(req.params.id, { comment }).then(article =>
-      res.redirect(`article/${article._id}/add-comment`, { comment })
+      res.redirect(`article/${article._id}`)
     );
   }
 };

@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const articleController = require("../controllers/article");
 
-// router.get("/", articleController.index);
 router.get("/new", articleController.new);
 router.post("/", articleController.create);
 router.get("/:id", articleController.show);
