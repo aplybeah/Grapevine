@@ -15,27 +15,9 @@
     <br>
     <p> {{article.content}}</p>
     <p class="timestamp"> {{article.createdAt}}</p>
+    <form action="/article/{{article.id}}">
+        <textarea rows="5" cols="90" name="comment" id="" maxlength="125"></textarea><br>
+        <input type="submit" value="Post">
+    </form>
 </div>
 <div class="bottombar"></div>
-=======
-
-<p class="timestamp">{{article.createdAt}}</p>
-<p>{{article.content}}</p>
-{{#if comment}}
-{{#each comment}}
-{{comment.content}}
-{{/each}}
-{{/if}}
-<form action="/article/{{article.id}}">
-    <textarea rows="5" cols="90" name="comment" id="" maxlength="125"></textarea><br>
-    <input type="submit" value="Post">
-</form>
-
-<form action="/article/{{article.id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Post"></form>
-<form action="/" method="GET">
-    <input type="submit" value="Back">
-</form>
-<form action="/article/{{article.id}}/edit">
-    <input type="submit" value="Edit"></form>
-

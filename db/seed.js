@@ -5,8 +5,8 @@ Article.remove({}).then(() => {
     {
       title: "New Methods in Marathon Training: Dedication, or Disaster?",
       content:
-        "blah, blah, blah, blah, blah blah blah blah. Blah, blah, blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,"
-      // comment: "I'm a comment!!"
+        "blah, blah, blah, blah, blah blah blah blah. Blah, blah, blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,blah,",
+      comment: "I'm a comment!!"
     },
     {
       title: "News, Drama, Coloring Books!!!",
