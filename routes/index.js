@@ -10,4 +10,5 @@ router.get("/", function(req, res) {
   });
 });
 router.use("/article", require("./article.js"));
+router.use("/comment", require("./comment"));
 module.exports = router;
