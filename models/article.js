@@ -8,7 +8,7 @@ const commentSchema = new Schema({
 const articleSchema = new Schema({
   title: String,
   content: String,
-  comment: commentSchema,
+  comments: commentSchema,
   createdAt: {
     type: Date,
     default: Date.now

@@ -19,11 +19,11 @@
     <p class="article"> {{article.content}}</p>
     <form action="{{article._id}}?_method=PUT" method="POST">
         <textarea rows="2" cols="90" name="comment" id="" maxlength="125" placeholder="Speak on it!"></textarea><br>
-        <input type="submit" value="Post">
+        <input type="submit" value="Post" name="content">
     </form>
     <h3 class="c-header">Comments:</h3>
 
-    <p>{{article.comment.content}}</p>
+    <p>{{article.comments.content}}</p>
 
 </div>
 <div class="bottombar"></div>

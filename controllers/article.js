@@ -1,4 +1,5 @@
 const { Article } = require("../models/index");
+const { Comment } = require("../models/index");
 module.exports = {
   new: function(req, res) {
     res.render("article/new");
@@ -29,22 +30,10 @@ module.exports = {
       content,
       comment
     }).then(article => {
-      article.comment.push({ content });
+      // Comment.content.push({ content });
       res.redirect(`/article/${article._id}`);
     });
   },
-  /* 
-  update: function(req, res) {
-    const { title, description, status } = req.body;
-    Lesson.findByIdAndUpdate(req.params.id, {
-      title,
-      description,
-      status: status === "on"
-    }).then(lesson => {
-      lesson.feedbacks.push({ content });
-      res.redirect(`/lesson/${lesson._id}`);
-    });
-  */
   delete: function(req, res) {
     Article.remove({ _id: req.params.id }).then(article => {
       res.redirect("/");
