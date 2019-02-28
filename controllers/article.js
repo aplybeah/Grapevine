@@ -23,14 +23,28 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    const { title, content } = req.body;
+    const { title, content, comment } = req.body;
     Article.findByIdAndUpdate(req.params.id, {
       title,
-      content
+      content,
+      comment
     }).then(article => {
+      article.comment.push({ content });
       res.redirect(`/article/${article._id}`);
     });
   },
+  /* 
+  update: function(req, res) {
+    const { title, description, status } = req.body;
+    Lesson.findByIdAndUpdate(req.params.id, {
+      title,
+      description,
+      status: status === "on"
+    }).then(lesson => {
+      lesson.feedbacks.push({ content });
+      res.redirect(`/lesson/${lesson._id}`);
+    });
+  */
   delete: function(req, res) {
     Article.remove({ _id: req.params.id }).then(article => {
       res.redirect("/");
