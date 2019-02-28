@@ -26,6 +26,7 @@ module.exports = {
   update: function(req, res) {
     const { title, content, comment } = req.body;
     Article.findByIdAndUpdate(req.params.id, {
+      //if statement
       title,
       content,
       comment
