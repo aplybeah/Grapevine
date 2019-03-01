@@ -38,7 +38,6 @@ module.exports = {
   },
   addComment: function(req, res) {
     const { comment } = req.body;
-
     Comment.create(comment).then(comment => {
       console.log(comment);
       Article.findById(req.params.id).then(article => {
