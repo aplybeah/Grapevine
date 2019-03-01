@@ -28,10 +28,5 @@ module.exports = {
     }).then(comment => {
       res.redirect(`/comment/${comment._id}`);
     });
-  },
-  delete: function(req, res) {
-    Comment.remove({ _id: req.params.id }).then(comment => {
-      res.redirect("/");
-    });
   }
 };

@@ -27,14 +27,29 @@ module.exports = {
     const { title, content, comment } = req.body;
     Article.findByIdAndUpdate(req.params.id, {
       //if statement
-      title,
-      content,
-      comment
+      $set: {
+        title,
+        content,
+        comment
+      }
     }).then(article => {
       // Comment.content.push({ content });
       res.redirect(`/article/${article._id}`);
     });
   },
+  // addComment: function(req, res) {
+  //   const { comment } = req.body;
+
+  //   Comment.create(comment).then(comment => {
+  //     console.log(comment);
+  //     Article.findById(req.params.id).then(article => {
+  //       article.comments.push(comment);
+  //       article.save((err, article) => {
+  //         res.redirect(`/article/${article._id}`);
+  //       });
+  //     });
+  //   });
+  // },
   delete: function(req, res) {
     Article.remove({ _id: req.params.id }).then(article => {
       res.redirect("/");

@@ -7,6 +7,6 @@ router.get("/new", commentController.new);
 router.get("/:id", commentController.show);
 router.get("/:id/edit", commentController.edit);
 router.put("/:id", commentController.update);
-router.delete("/:id", commentController.delete);
+// router.delete("/:id", commentController.delete);
 
 module.exports = router;
