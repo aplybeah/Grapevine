@@ -18,8 +18,7 @@
     <br>
     <p class="article"> {{article.content}}</p>
     <form action="/article/{{article._id}}/comment" method="POST">
-        <textarea rows="2" cols="90" name="comments[0].content" id="" maxlength="125"
-            placeholder="Speak on it!"></textarea><br>
+        <textarea rows="2" cols="90" name="content" id="" maxlength="125" placeholder="Speak on it!"></textarea><br>
         <input type="submit" value="Post">
     </form>
     <h3 class="c-header">Comments:</h3>

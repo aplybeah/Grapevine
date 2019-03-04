@@ -26,28 +26,23 @@ module.exports = {
   update: function(req, res) {
     const { title, content } = req.body;
     Article.findByIdAndUpdate(req.params.id, {
-      //if statement
       $set: {
         title,
         content
       }
     }).then(article => {
-      // Comment.content.push({ content });
       res.redirect(`/article/${article._id}`);
     });
   },
   addComment: function(req, res) {
+    console.log("making a new comment!");
+    console.log(req.body);
     const { comment } = req.body;
-    Comment.create(comment).then(comment => {
-      console.log(comment);
-      Article.findById(req.params.id).then(article => {
-        article.comments.push(comment);
-        article.save((err, article) => {
-          res.redirect(`/article/${article._id}`);
-        });
-      });
-    });
+    Article.findByIdAndUpdate(req.params.id, { comment }).then(article =>
+      res.redirect({ comment }, `article/${article._id}/comment`)
+    );
   },
+
   delete: function(req, res) {
     Article.remove({ _id: req.params.id }).then(article => {
       res.redirect("/");
